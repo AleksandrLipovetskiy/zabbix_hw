@@ -1,15 +1,25 @@
 # Домашнее задание Александра Липовецкого по занятию "Система мониторинга Zabbix"
 
 vm-zabbix
+
 ROOT
+
     1  wget https://repo.zabbix.com/zabbix/7.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_7.0-2+ubuntu24.04_all.deb
+    
     2  dpkg -i zabbix-release_7.0-2+ubuntu24.04_all.deb
+    
     3  apt update
+    
     4  apt install zabbix-server-pgsql zabbix-frontend-php php8.3-pgsql zabbix-apache-conf zabbix-sql-scripts
+    
     5  exit
+    
     6  systemctl restart zabbix-server apache2
+    
     7  systemctl enable zabbix-server apache2
+    
     8  systemctl status  zabbix-server
+    
 VM-SAM
     1  sudo apt update
     2  sudo apt upgrade
