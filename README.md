@@ -1,6 +1,6 @@
 # Домашнее задание Александра Липовецкого по занятию "Система мониторинга Zabbix"
 
-vm-zabbix
+# vm-zabbix
 
 ROOT
 
@@ -32,7 +32,7 @@ ROOT
     systemctl enable zabbix-agent
     systemctl status zabbix-agent
     
-vm-ansible
+# vm-ansible
 
 VM-SAM
 
