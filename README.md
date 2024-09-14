@@ -1,6 +1,7 @@
 # Домашнее задание Александра Липовецкого по занятию "Система мониторинга Zabbix"
 
 vm-zabbix
+
 ROOT
 
     wget https://repo.zabbix.com/zabbix/7.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_7.0-2+ubuntu24.04_all.deb
@@ -36,6 +37,7 @@ ROOT
     systemctl status zabbix-agent
     
 vm-ansible
+
 VM-SAM
 
     sudo apt upgrade
@@ -48,7 +50,7 @@ VM-SAM
     sudo nano zabbix_agentd.conf
     sudo -s
     
-ROOROOT
+ROOT
 
    wget https://repo.zabbix.com/zabbix/7.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_7.0-2+ubuntu24.04_all.deb
    dpkg -i zabbix-release_7.0-2+ubuntu24.04_all.deb
@@ -62,6 +64,8 @@ ROOROOT
    systemctl status zabbix-agent
    tail -f /var/log/zabbix/zabbix_agentd.log
    
+
+
 
 ![Авторизация в админке](https://github.com/AleksandrLipovetskiy/zabbix_hw/blob/main/Авторизация_в_админке.png)
 
