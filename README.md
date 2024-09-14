@@ -12,12 +12,12 @@ ROOT
     6  systemctl restart zabbix-server apache2
     7  systemctl enable zabbix-server apache2
     8  systemctl status  zabbix-server
-    
+
 VM-SAM
-1  sudo apt update
-2  sudo apt upgrade
-3  sudo apt install postgresql
-4  sudo -s
+    1  sudo apt update
+    2  sudo apt upgrade
+    3  sudo apt install postgresql
+    4  sudo -s
 5  sudo -u postgres createuser --pwprompt zabbix
 6  sudo -u postgres createdb -O zabbix zabbix
 7  zcat /usr/share/zabbix-sql-scripts/postgresql/server.sql.gz | sudo -u zabbix psql zabbix
