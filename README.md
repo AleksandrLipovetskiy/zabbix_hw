@@ -14,47 +14,51 @@ ROOT
     8  systemctl status  zabbix-server
 
 VM-SAM
-    1  sudo apt update
-    2  sudo apt upgrade
-    3  sudo apt install postgresql
-    4  sudo -s
-5  sudo -u postgres createuser --pwprompt zabbix
-6  sudo -u postgres createdb -O zabbix zabbix
-7  zcat /usr/share/zabbix-sql-scripts/postgresql/server.sql.gz | sudo -u zabbix psql zabbix
-8  sudo nano /etc/zabbix/zabbix_server.conf
-9  sudo -s
+
+    sudo apt update
+    sudo apt upgrade
+    
+    sudo apt install postgresql
+    
+    sudo -s
+    
+    sudo -u postgres createuser --pwprompt zabbix
+    sudo -u postgres createdb -O zabbix zabbix
+    zcat /usr/share/zabbix-sql-scripts/postgresql/server.sql.gz | sudo -u zabbix psql zabbix
+    sudo nano /etc/zabbix/zabbix_server.conf
+    sudo -s
 VM-SAM
-12 sudo -s
+    sudo -s
 ROOT
-11  apt install zabbix-agent
-12  systemctl restart zabbix-agent
-13  systemctl enable zabbix-agent
-14  systemctl status zabbix-agent
+    apt install zabbix-agent
+    systemctl restart zabbix-agent
+    systemctl enable zabbix-agent
+    systemctl status zabbix-agent
 
 vm-ansible
 VM-SAM
-719  sudo apt upgrade
-720  sudo -s
-721  cd /etc/zabbix/zabbix_agentd.d/
-722  ll
-723  cd ..
-724  ll
-725  sudo nano zabbix_agentd.c
-726  sudo nano zabbix_agentd.conf
-727  sudo -s
+    sudo apt upgrade
+    sudo -s
+    cd /etc/zabbix/zabbix_agentd.d/
+    ll
+    cd ..
+    ll
+    sudo nano zabbix_agentd.c
+    sudo nano zabbix_agentd.conf
+    sudo -s
 
 ROOROOT
-104  wget https://repo.zabbix.com/zabbix/7.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_7.0-2+ubuntu24.04_all.deb
-105  dpkg -i zabbix-release_7.0-2+ubuntu24.04_all.deb
-106  apt update
-107  apt install zabbix-agent
-108  systemctl restart zabbix-agent
-109  systemctl enable zabbix-agent
-110  systemctl status zabbix-agent
-111  exit
-112  systemctl restart zabbix-agent
-113  systemctl status zabbix-agent
-114  tail -f /var/log/zabbix/zabbix_agentd.log
+   wget https://repo.zabbix.com/zabbix/7.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_7.0-2+ubuntu24.04_all.deb
+   dpkg -i zabbix-release_7.0-2+ubuntu24.04_all.deb
+   apt update
+   apt install zabbix-agent
+   systemctl restart zabbix-agent
+   systemctl enable zabbix-agent
+   systemctl status zabbix-agent
+   exit
+   systemctl restart zabbix-agent
+   systemctl status zabbix-agent
+   tail -f /var/log/zabbix/zabbix_agentd.log
 
 ![Авторизация в админке](https://github.com/AleksandrLipovetskiy/zabbix_hw/blob/main/Авторизация_в_админке.png)
 
