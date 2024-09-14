@@ -25,10 +25,6 @@ VM-SAM
     sudo nano /etc/zabbix/zabbix_server.conf
     sudo -s
     
-VM-SAM
-
-    sudo -s
-    
 ROOT
 
     apt install zabbix-agent
@@ -53,28 +49,16 @@ VM-SAM
 ROOT
 
    wget https://repo.zabbix.com/zabbix/7.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_7.0-2+ubuntu24.04_all.deb
-
    dpkg -i zabbix-release_7.0-2+ubuntu24.04_all.deb
-
    apt update
-
    apt install zabbix-agent
-
    systemctl restart zabbix-agent
-
    systemctl enable zabbix-agent
-
    systemctl status zabbix-agent
-
    exit
-
    systemctl restart zabbix-agent
-
    systemctl status zabbix-agent
-
-   tail -f /var/log/zabbix/zabbix_agentd.log
-
-    
+   tail -f /var/log/zabbix/zabbix_agentd.log    
 
 
 
