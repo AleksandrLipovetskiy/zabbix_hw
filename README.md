@@ -1,6 +1,21 @@
 # Домашнее задание Александра Липовецкого по занятию "Система мониторинга Zabbix"
 
-# vm-zabbix
+# Часть 2
+
+![Задание 1](https://github.com/AleksandrLipovetskiy/zabbix_hw/blob/main/Задание 1.png)
+
+![Задание 2-3_1](https://github.com/AleksandrLipovetskiy/zabbix_hw/blob/main/Задание 2-3_1.png)
+
+![Задание 2-3_2](https://github.com/AleksandrLipovetskiy/zabbix_hw/blob/main/Задание 2-3_2.png)
+
+![Задание 2-3_3](https://github.com/AleksandrLipovetskiy/zabbix_hw/blob/main/Задание 2-3_3.png)
+
+![Задание 4](https://github.com/AleksandrLipovetskiy/zabbix_hw/blob/main/Задание 4.png)
+
+
+# Часть 1
+
+## vm-zabbix
 
 ROOT
 
@@ -32,7 +47,7 @@ ROOT
     systemctl enable zabbix-agent
     systemctl status zabbix-agent
     
-# vm-ansible
+## vm-ansible
 
 VM-SAM
 
